@@ -81,7 +81,7 @@ namespace Lab_15
         public int getNext()
         {
             IndexProgress++;
-            elemProgress += StartElement * stepProgr;
+            elemProgress = StartElement + IndexProgress * stepProgr;
             return elemProgress;
         }
 
@@ -131,6 +131,7 @@ namespace Lab_15
         {
             IndexProgress++;
             elemProgress = ((elemProgress == 0) ? StartElement : elemProgress) * stepProgr;
+            //elemProgress = Convert.ToInt32(StartElement * Math.Pow(Convert.ToDouble(stepProgr), Convert.ToDouble(IndexProgress)));
             return elemProgress;
         }
 
